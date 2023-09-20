@@ -1,0 +1,1 @@
+This repository contains various examples built using banh-mi-framework.It also serves as a starting point for developing using banh-mi framework and get a sense of what we need to fix and include in the framework
