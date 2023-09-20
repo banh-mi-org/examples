@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "module": ".src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start:prod": "bun run ./src/index.ts",
+    "start:dev": "bun run --watch ./src/index.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@banh-mi/framework": "^0.0.1-alpha.3",
+    "mongoose": "^7.5.2"
+  }
+}

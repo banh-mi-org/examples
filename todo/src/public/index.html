@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&family=Rubik:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BanhMi ToDo</title>
+</head>
+
+<body>
+    <main class="h-screen w-screen flex">
+        <aside class="h-screen w-2/5 bg-[#242436] text-[#f2f2f2] py-8 px-8 flex flex-col gap-8"
+            style="border-radius: 0 1rem 1rem 0;">
+            <h1 class="text-4xl font-bold text-center">BanhMi ToDo</h1>
+            <p class="text-justify text-sm">
+                BanhMi is a simple & experimental framework written for Bun runtime.It's currently only intended for
+                personal use.It's not even released on NPM yet.And the examples are also included in the base
+                repository.
+                It's not heavily tested and not recommended for production use and the api can change at anytime.
+                This todo application is written with html, css, tailwindcss,javascript, banh-mi and mongoose (mongodb)
+                to serve as an feature showcase of banh-mi framework.
+                Planning on releasing after features equivalent to expressjs are implemented and enough testing is
+                conducted.
+            </p>
+            <div>
+                <h3 class="text-xl font-semibold">Learn more</h3>
+                <ul>
+                    <li><a href="https://github.com/Nethrenial/banh-mi" class="text-blue-400 underline"
+                            target="_blank">Github Repository</a></li>
+                </ul>
+            </div>
+            <div class="mt-auto flex flex-col gap-4 items-center justify-center text-sm">
+                <p class="text-center">
+                    A labor of ❤️ by Nethsara Elvitigala
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/Nethrenial"
+                        class="p-1 rounded-full bg-white transition hover:scale-[1.1]">
+                        <img src="/assets/images/github-mark.svg" alt="Github logo" class="w-[32px] h-[32px] ">
+                    </a>
+                    <a href="https://www.linkedin.com/in/nethsara-elvitigala"
+                        class="p-1 rounded-full bg-white transition hover:scale-[1.1]">
+                        <img src="/assets/images/linkedin-mark.png" alt="Linkedin logo" class="w-[24px] h-[24px] m-1">
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <section class="h-screen w-3/5 flex flex-col py-8 px-16">
+            <form action="/todos" id="new-todo-form">
+                <div class="flex items-center gap-2">
+                    <input type="text" id="new-todo-input" name="new-todo-input"
+                        class="w-full py-2 px-4 rounded-lg border-lg transition border-transparent focus:border-[#242436] outline-none"
+                        placeholder="Add new task">
+                    <button
+                        class="bg-[#242436] text-white text-[18px] p-[0.4rem] rounded-lg transition hover:scale-[1.1] active:scale-[1.05]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12.475 16.825L20.85 8.45l-1.3-1.3l-8.375 8.375l1.3 1.3ZM5.95 19q-2.5-.125-3.725-1.05T1 15.275q0-1.625 1.338-2.638t3.712-1.212q.975-.075 1.463-.313T8 10.45q0-.65-.738-.975T4.825 9L5 7q2.575.2 3.788 1.038T10 10.45q0 1.325-.963 2.075t-2.837.9q-1.6.125-2.4.588T3 15.275q0 .875.7 1.263T6.05 17l-.1 2Zm7 .175L8.825 15.05l9.55-9.55q.5-.5 1.188-.5t1.187.5l1.75 1.75q.5.5.5 1.188t-.5 1.187l-9.55 9.55ZM8.975 20q-.425.1-.75-.225T8 19.025l.825-3.975l4.125 4.125L8.975 20Z" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            <h2 class="text-lg my-4 font-semibold">Remaining Tasks</h2>
+            <ul id="remaining-tasks">
+            </ul>
+            <h2 class="text-lg my-4 font-semibold">Completed Tasks</h2>
+            <ul id="completed-tasks">
+            </ul>
+        </section>
+    </main>
+    <h1>This is an example todo application developed to showcase the features of BanhMi framework</h1>
+    <script type="module" src="/assets/js/index.js"></script>
+</body>
+
+</html>
